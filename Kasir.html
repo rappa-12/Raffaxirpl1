@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Kasir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #d8ecff;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            width: 75%;
+            padding: 20px;
+        }
+        .sidebar img {
+            width: 100px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .button-group button {
+            margin-right: 10px;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+ </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="sidebar">
+        <h2>KASIR</h2>
+        <img src="kasir.png" alt="Kasir">
+        <button>Kelola Transaksi</button>
+        <button>Logout</button>
+    </div>
+    <div class="content">
+        <div class="form-section">
+            <select name="Pilih Menu">
+                <option value="10">Pilih Menu</option>
+                <option value="Sprit">Sprit</option>
+                <option value="Floridina">Floridina</option>
+       </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantitas</label>
+                    <input type="number" id="quantity" value="10">
+                </div>
+                <div class="form-group">
+                    <label>Harga Satuan</label>
+                    <input type="text" value="Rp. 20.000" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Total Harga</label>
+                    <input type="text" value="Rp. 200.000" readonly>
+                </div>
+        <div class="form-group">
+                    <label>Total Harga</label>
+                    <input type="text" value="Rp. 200.000" readonly>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn-primary">Tambah</button>
+                    <button type="reset" class="btn-secondary">Reset</button>
+                </div>
+            </form>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Transaksi</th>
+                        <th>Kode Barang</th>
+                        <th>Nama Barang</th>
+                        <th>Harga Satuan</th>
+                        <th>Quantitas</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TR001</td>
+                        <td>fan01</td>
+                        <td>Fanta Strawberry</td>
+                        <td>Rp. 20.000</td>
+                        <td>10</td>
+                        <td>Rp. 200.000</td>
+                    </tr>
+                    <tr>
+                        <td>TR002</td>
+                        <td>cola01</td>
+                        <td>Coca-Cola</td>
+                        <td>Rp. 20.000</td>
+                        <td>10</td>
+                        <td>Rp. 200.000</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Total Harga: Rp. 200.000</h3>
+            <div class="form-group">
+                <label>Kembalian</label>
+                <input type="text" value="Rp. 0" readonly>
+            </div>
+            <div class="button-group">
+                <button class="btn-primary">Bayar</button>
+                <button class="btn-secondary">Print</button>
+                <button class="btn-secondary">Simpan</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

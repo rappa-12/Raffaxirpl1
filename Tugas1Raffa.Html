@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Kelulusan</title>
+    <script>
+       
+        function cekKelulusan() {
+           
+            let nilai = parseInt(document.getElementById("nilai").value);
+            let tidakHadir = parseInt(document.getElementById("tidakHadir").value);
+
+            
+            if (nilai < 75 && tidakHadir > 5) {
+                alert("Anda tidak lulus");
+            } else {
+                alert("Anda lulus");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Cek Kelulusan</h2>
+
+    <label for="nilai">Masukkan nilai Anda:</label><br>
+    <input type="number" id="nilai" name="nilai"><br><br>
+
+    <label for="tidakHadir">Masukkan jumlah ketidakhadiran:</label><br>
+    <input type="number" id="tidakHadir" name="tidakHadir"><br><br>
+
+    <button onclick="cekKelulusan()">Cek Kelulusan</button>
+
+</body>
+</html>

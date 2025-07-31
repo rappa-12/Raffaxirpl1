@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F8FF;
+        }
+
+        .dashboard {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            background-color: #87CEFA;
+            color: white;
+            width: 250px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar img {
+            width: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .sidebar h2 {
+            margin: 10px 0;
+        }
+
+        .sidebar button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .sidebar button:hover {
+            background-color: #808080;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-section input, .form-section select {
+            width: calc(50% - 10px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-section button {
+            padding: 10px 20px;
+            background-color:#880000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-section button:hover {
+            background-color: #880000;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #00BFFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="sidebar">
+        <img src="https://via.placeholder.com/80" alt="Admin Avatar">
+        <h2>Admin</h2>
+        <button>Kelola User</button>
+        <button>Kelola Laporan</button>
+        <button>Logout</button>
+    </div>
+    <div class="content">
+        <h1>Kelola User</h1>
+        <div class="form-section">
+            <select name="tipe_user">
+                <option value="">Tipe User</option>
+                <option value="gudang">Gudang</option>
+                <option value="kamar">Kamar</option>
+            </select>
+            <input type="text" placeholder="Nama">
+            <input type="text" placeholder="Telepon">
+            <input type="text" placeholder="Alamat">
+            <input type="text" placeholder="Nama belakang">
+            <input type="password" placeholder="Kata sandi">
+            <button>Edit</button>
+            <button>Tambah</button>
+            <button>Hapus</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID User</th>
+                    <th>Tipe User</th>
+                    <th>Nama User</th>
+                    <th>Alamat</th>
+                    <th>Telepon</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Gudang</td>
+                    <td>Jordi</td>
+                    <td>Bali</td>
+                    <td>0865209</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Kamar 1</td>
+                    <td>Juliet</td>
+                    <td>Bali</td>
+                    <td>0889761</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Kamar 2</td>
+                    <td>Romeo</td>
+                    <td>Bali</td>
+                    <td>0887564</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
